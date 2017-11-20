@@ -87,7 +87,7 @@ export default class MetadataService {
 
     getEndSessionEndpoint() {
         Log.debug("MetadataService.getEndSessionEndpoint");
-        return this._getMetadataProperty("end_session_endpoint", true);
+        return this._getMetadataProperty("ping_end_session_endpoint", true);
     }
 
     getRevocationEndpoint() {
