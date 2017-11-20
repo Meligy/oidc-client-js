@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <title>oidc-client test</title>
         <link rel='stylesheet' href='app.css'>
+        <meta http-equiv="Content-Security-Policy" content="default-src gap://ready file://* *; style-src 'self' http://* https://* 'unsafe-inline'; script-src 'self' http://* https://* 'unsafe-inline' 'unsafe-eval'">
     </head>
+
     <body>
-        <ul>
-            <li><a href='oidc-client-sample.html'>OidcClient Sample</a></li>
-            <li><a href='user-manager-sample.html'>UserManager Sample</a></li>
-        </ul>
+        <div>
+            <a href='/'>home</a>
+            <a href='oidc-client-sample.html'>clear url</a>
+            <label>follow links
+                <input type="checkbox" id='links'>
+            </label>
+            <button id='signin'>signin</button>
+            <button id='processSignin'>process signin response</button>
+            <button id='signinDifferentCallback'>signin using different callback page</button>
+            <button id='signout'>signout</button>
+            <button id='processSignout'>process signout response</button>
+        </div>
+
+        <pre id='out'></pre>
+
+        <script src='oidc-client.js'></script>
+        <script src='log.js'></script>
+        <script src='oidc-client-sample.js'></script>
     </body>
+
 </html>
